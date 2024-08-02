@@ -1,0 +1,71 @@
+/* 1) Общие стили для всех элементов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 2) Высота страницы не меньше высоты экрана */
+  body {
+    min-height: 100vh;
+  }
+  
+  /* 3) Стили для хедера */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+  
+  /* 4) Стили для ссылок в хедере */
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    height: 40px;
+    padding: 10px;
+    gap: 25px;
+  }
+  
+  header nav ul a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* 5) Стили для футера */
+  footer {
+    min-height: 180px;
+    padding: 15px;
+  }
+  
+  /* 6) Стили для ссылок в футере */
+  footer nav ul, div ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 5px;
+  }
+  
+  footer nav ul a, div ul a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Версия для экрана меньше 768px */
+  @media (max-width: 767px) {
+    footer nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  
+    footer nav ul a {
+      width: calc(33.33% - 10px);
+    }
+  }
+  
+  /* 7) Стили для копирайта в футере */
+  footer > div:last-child {
+    margin-top: 10px;
+  }
