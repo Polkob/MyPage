@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="my-styles.css"> -->
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
+
 <body>
     <header>
         <nav>
-            <ul>
-                <li>
-                    <a href="#section-1" class="active">Главная</a>
-                </li>
-                <li>
-                    <a href="#section-2">Наши услуги</a>
-                </li>
-                <li>
-                    <a href="#section-3">Наши работы</a>
-                </li>
-                <li>
-                    <a href="#section-4">Наши цены</a>
-                </li>
-                <li>
-                    <a href="#section-5">Контакты</a>
-                </li>
-            </ul>
+            <div class="-desktop">
+                <img src="./images/logo.png" id="logo">
+                <ul>
+                    <li>
+                        <a href="#section-1" class="active">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#section-2">Наши услуги</a>
+                    </li>
+                    <li>
+                        <a href="#section-3">Наши работы</a>
+                    </li>
+                    <li>
+                        <a href="#section-4">Наши цены</a>
+                    </li>
+                    <li>
+                        <a href="#section-5">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="-mobile">
+                <img src="./images/logo.png" id="logo">
+                <div class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -41,13 +56,25 @@
             </div>
         </section>
         <section id="section-2">
-            <div>
-                <h2>
-                    Наши услуги
-                </h2>
-                <p>
-                    Lorem
-                </p>
+            <div class="content">
+                <h2>Услуги</h2>
+                <div class="tabs-widget">
+                    <div class="tabs-list"></div>
+                    <div class="tabs-wrapper">
+                        <div class="tabs-content" data-tab-title="Услуга 1">
+                            <h3>
+                                Услуга 1
+                            </h3>
+                            <p>Lorem...</p>
+                        </div>
+                        <div class="tabs-content" data-tab-title="Услуга 2">
+                            <h3>
+                                Услуга 2
+                            </h3>
+                            <p>Lorem...</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="section-3">
@@ -119,6 +146,17 @@
             <p>Landing Page Copyright ©2024</p>
         </div>
     </footer>
-    <script defer src="script.js"></script>
+    <div class="navigation-menu -mobile">
+        <nav>
+            <ul>
+                <li><a href="#section-1" class="active">Главная</a></li>
+                <li><a href="#section-2">Наши услуги</a></li>
+                <li><a href="#section-3">Наши работы</a></li>
+                <li><a href="#section-4">Наши цены</a></li>
+                <li><a href="#section-5">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
 </body>
+
 </html>
