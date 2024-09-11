@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('a[href^="#"]');
     const sections = document.querySelectorAll('section');
 
     links.forEach(link => {
-        link.addEventListener('click', function(event) {
+        link.addEventListener('click', function (event) {
             event.preventDefault();
 
 
@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetSection) {
                 targetSection.classList.add('active');
                 //для прокрутки
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                  });
+                // targetSection.scrollIntoView({
+                //     behavior: 'smooth',
+                //     block: 'start'
+                // });
             }
         });
     });
 
-    setTimeout(function() {
+    setTimeout(function () {
         const url = new URL(window.location.href);
         if (url.hash) {
             const targetSection = document.querySelector(url.hash);
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 links.forEach(link => link.classList.remove('active'));
                 targetLinks.forEach(link => link.classList.add('active'));
 
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                // targetSection.scrollIntoView({
+                //     behavior: 'smooth',
+                //     block: 'start'
+                // });
             }
         }
     }, 0);
@@ -62,32 +62,32 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     const $tabs = $('.tabs-widget');
 
     const $tabTitles = [];
-  
-    $tabs.find('.tabs-content').each(function() {
-      $tabTitles.push($(this).data('tab-title'));
+
+    $tabs.find('.tabs-content').each(function () {
+        $tabTitles.push($(this).data('tab-title'));
     });
-  
+
     const $tabsList = $tabs.find('.tabs-list');
     $tabsList.append('<ul></ul>');
     const $tabsListUl = $tabsList.find('ul');
-  
-    $.each($tabTitles, function(index, title) {
-      $tabsListUl.append(`<li><span>${title}</span></li>`);
+
+    $.each($tabTitles, function (index, title) {
+        $tabsListUl.append(`<li><span>${title}</span></li>`);
     });
-  
+
     $tabs.find('.tabs-content').first().addClass('active');
-  
-    $tabsListUl.find('li').on('mouseover', function() {
-      $tabs.find('.tabs-content, li').removeClass('active');
-  
-      const index = $(this).index();
-      $tabs.find('.tabs-content').eq(index).addClass('active');
-  
-      $(this).addClass('active');
+
+    $tabsListUl.find('li').on('mouseover', function () {
+        $tabs.find('.tabs-content, li').removeClass('active');
+
+        const index = $(this).index();
+        $tabs.find('.tabs-content').eq(index).addClass('active');
+
+        $(this).addClass('active');
     });
-  });
+});
