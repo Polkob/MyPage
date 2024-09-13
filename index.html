@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sliky Shop</title>
     <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" href="styles/desktop.css">
-    <link rel="stylesheet" href="styles/mobile.css">А
+    <link rel="stylesheet" href="styles/desktop/desktop.css">
+    <link rel="stylesheet" href="styles/desktop/homePage.css">
+    <link rel="stylesheet" href="styles/modile/mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <script src="owlcarousel/owl.carousel.min.js"></script>
     <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/home.js"></script>
 </head>
 
 <body>
@@ -48,13 +53,22 @@
     </header>
     <main>
         <section id="section-1" class="active">
-            <div>
-                <h1>
-                    Страница
-                </h1>
-                <p>
-                    Lorem
-                </p>
+            <div class="home_page">
+                <div class="img_logo">
+                    <img src="./images/homePage/1.png" alt="Слайд 1" />
+                </div>
+                <!-- <h1>
+                    SLIKY SHOP
+                </h1> -->
+                <div id="slideshow">
+                    <div class="content">
+                        <div class="slider owl-carousel">
+                            <img src="./images/homePage/2.png" alt="Слайд 2" />
+                            <img src="./images/homePage/3.png" alt="Слайд 3" />
+                            <img src="./images/homePage/4.png" alt="Слайд 4" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="section-2">
